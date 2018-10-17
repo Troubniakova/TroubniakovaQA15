@@ -107,4 +107,9 @@ public class TestBase {
     public void modifyContact() {
         wd.findElement(By.cssSelector("[href='edit.php?id=2']")).click();
     }
+
+    public void deleteContact() {
+        wd.findElement(By.cssSelector("[onclick=\"DeleteSel()\"]")).click();
+        wd.switchTo().alert().accept();
+    }
 }

@@ -13,8 +13,4 @@ public class DeleteContactTests extends TestBase {
 
     }
 
-    public void deleteContact() {
-        wd.findElement(By.cssSelector("[onclick=\"DeleteSel()\"]")).click();
-        wd.switchTo().alert().accept();
-    }
 }
