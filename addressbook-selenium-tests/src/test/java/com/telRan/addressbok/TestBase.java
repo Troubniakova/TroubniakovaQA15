@@ -93,7 +93,6 @@ public class TestBase {
         type(By.name("address"), adress);
         type(By.name("mobile"), mobile);
         type(By.name("email"), email);
-
     }
 
     public void selectContact() {
