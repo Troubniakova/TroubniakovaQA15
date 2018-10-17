@@ -74,4 +74,37 @@ public class TestBase {
     public void deleteGroup() {
         wd.findElement(By.name("delete")).click();
     }
+
+    public void openAddNewPage() {
+        wd.findElement(By.cssSelector("[href='edit.php']")).click();
+    }
+
+    public void returnToHomeGage() {
+        wd.findElement(By.cssSelector("[href='./']")).click();
+    }
+
+    public void submitAddNewContact() {
+        wd.findElement(By.name("submit")).click();
+    }
+
+    public void fillEditForm(String firstName, String lastName, String adress, String mobile, String email) {
+        type(By.name("firstname"), firstName);
+        type(By.name("lastname"), lastName);
+        type(By.name("address"), adress);
+        type(By.name("mobile"), mobile);
+        type(By.name("email"), email);
+
+    }
+
+    public void selectContact() {
+        wd.findElement(By.id("2")).click();
+    }
+
+    public void updateContactModification() {
+        wd.findElement(By.name("update")).click();
+    }
+
+    public void modifyContact() {
+        wd.findElement(By.cssSelector("[href='edit.php?id=2']")).click();
+    }
 }
