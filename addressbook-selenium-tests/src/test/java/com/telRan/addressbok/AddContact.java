@@ -7,11 +7,13 @@ public class AddContact extends TestBase {
     @Test
     public void testAddContact(){
         openAddNewPage();
-        fillEditForm("Vasya", "Pupkin", "Gogolya 5","0334567876", "fghj@mail.ru");
+        fillEditForm(new Contact().setFirstName("Vasya")
+                .setLastName("Pupkin")
+                .setAdress("Gogolya 5")
+                .setMobile("fghj@mail.ru")
+                .setEmail("fghj@mail.ru"));
         submitAddNewContact();
         returnToHomeGage();
-
-
     }
 
 }

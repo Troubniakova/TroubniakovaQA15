@@ -8,7 +8,9 @@ public class GroupCretionTests extends TestBase{
     public void testGroupCretion(){
         openGroupPage();
         initGroupCreation();
-        fillGroupForm("QA 15", "jhggh", "footer");
+        fillGroupForm(new Group().setGroupName("QA 15")
+                .setGroupHeader("jhggh")
+                .setGroupFooter("footer"));
         submitGroupCreation();
         returnToGroupsPage();
 

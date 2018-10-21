@@ -1,6 +1,7 @@
 package com.telRan.addressbok;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -40,10 +41,10 @@ public class TestBase {
         wd.findElement(By.name("submit")).click();
     }
 
-    public void fillGroupForm(String groupName, String groupHeader, String groupFooter) {
-        type(By.name("group_name"), groupName);
-        type(By.name("group_header"), groupHeader);
-        type(By.name("group_footer"), groupFooter);
+    public void fillGroupForm(Group group) {
+        type(By.name("group_name"), group.getGroupName());
+        type(By.name("group_header"), group.getGroupHeader());
+        type(By.name("group_footer"), group.getGroupFooter());
     }
 
     public void initGroupCreation() {
@@ -59,44 +60,51 @@ public class TestBase {
         wd.quit();
     }
 
-    public void submitGroupModification() {
+    public void submitGroupModification()
+    {
         wd.findElement(By.name("update")).click();
     }
 
-    public void initGroupModification() {
+    public void initGroupModification()
+    {
         wd.findElement(By.cssSelector("[name=edit]:last-child")).click();
     }
 
-    public void selectGroup() {
+    public void selectGroup()
+    {
         wd.findElement(By.name("selected[]")).click();
     }
 
-    public void deleteGroup() {
+    public void deleteGroup()
+    {
         wd.findElement(By.name("delete")).click();
     }
 
-    public void openAddNewPage() {
+    public void openAddNewPage()
+    {
         wd.findElement(By.cssSelector("[href='edit.php']")).click();
     }
 
-    public void returnToHomeGage() {
+    public void returnToHomeGage()
+    {
         wd.findElement(By.cssSelector("[href='./']")).click();
     }
 
-    public void submitAddNewContact() {
+    public void submitAddNewContact()
+    {
         wd.findElement(By.name("submit")).click();
     }
 
-    public void fillEditForm(String firstName, String lastName, String adress, String mobile, String email) {
-        type(By.name("firstname"), firstName);
-        type(By.name("lastname"), lastName);
-        type(By.name("address"), adress);
-        type(By.name("mobile"), mobile);
-        type(By.name("email"), email);
+    public void fillEditForm(Contact contact) {
+        type(By.name("firstname"), contact.getFirstName());
+        type(By.name("lastname"), contact.getLastName());
+        type(By.name("address"), contact.getAdress());
+        type(By.name("mobile"), contact.getMobile());
+        type(By.name("email"), contact.getEmail());
     }
 
     public void selectContact() {
-        wd.findElement(By.id("2")).click();
+        wd.findElement(By.name("selected[]")).click();
     }
 
     public void updateContactModification() {
@@ -104,11 +112,49 @@ public class TestBase {
     }
 
     public void modifyContact() {
-        wd.findElement(By.cssSelector("[href='edit.php?id=2']")).click();
+        wd.findElement(By.cssSelector("[title='Edit']")).click();
     }
 
     public void deleteContact() {
         wd.findElement(By.cssSelector("[onclick=\"DeleteSel()\"]")).click();
         wd.switchTo().alert().accept();
+    }
+
+    public boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean isGroupPresent()
+    {
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    public boolean isContactPresent(){
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    protected void createGroup() {
+        initGroupCreation();
+        fillGroupForm(new Group().setGroupName("QA 15")
+                .setGroupHeader("jhggh")
+                .setGroupFooter("footer"));
+        submitGroupCreation();
+        returnToGroupsPage();
+    }
+
+    protected void createContact() {
+        openAddNewPage();
+        fillEditForm(new Contact().setFirstName("Vasya")
+                .setLastName("Pupkin")
+                .setAdress("Gogolya 5")
+                .setMobile("fghj@mail.ru")
+                .setEmail("fghj@mail.ru"));
+        submitAddNewContact();
+        returnToHomeGage();
     }
 }
