@@ -6,22 +6,22 @@ import org.testng.annotations.Test;
 public class ContactModificationTests extends TestBase {
     @BeforeMethod
     public void preconditions(){
-        if(!isContactPresent()){
-            createContact();
+        if(!app.isContactPresent()){
+            app.createContact();
         }
     }
 
     @Test
     public void testContactModification(){
-        selectContact();
-        modifyContact();
-        fillEditForm(new Contact().setFirstName("Changed")
+        app.selectContact();
+        app.modifyContact();
+        app.fillEditForm(new Contact().setFirstName("Changed")
                 .setLastName("Changed")
                 .setAdress("Gogolya 5")
                 .setMobile("fghj@mail.ru")
                 .setEmail("fghj@mail.ru"));
-        updateContactModification();
-        returnToHomeGage();
+        app.updateContactModification();
+        app.returnToHomeGage();
     }
 
 }
