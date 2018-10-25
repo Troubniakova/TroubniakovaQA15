@@ -1,5 +1,6 @@
-package com.telRan.addressbok;
+package com.telRan.addressbok.tests;
 
+import com.telRan.addressbok.model.Group;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

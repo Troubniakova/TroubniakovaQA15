@@ -1,11 +1,12 @@
-package com.telRan.addressbok;
+package com.telRan.addressbok.tests;
 
+import com.telRan.addressbok.manager.ApplicationManager;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected ApplicationManager app = new ApplicationManager();
 
     @BeforeClass
     public void setUp(){

@@ -1,15 +1,13 @@
-package com.telRan.addressbok;
+package com.telRan.addressbok.manager;
 
+import com.telRan.addressbok.model.Group;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
-public class GroupHelper {
-    WebDriver wd;
-    public void type(By locator, String text) {
-        click(locator);
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+public class GroupHelper extends HelperBase {
+
+    public GroupHelper(WebDriver wd) {
+        super(wd);
     }
 
     public void returnToGroupsPage() {
@@ -19,10 +17,6 @@ public class GroupHelper {
     public void submitGroupCreation()
     {
         click(By.name("submit"));
-    }
-
-    public void click(By locator) {
-        wd.findElement(locator).click();
     }
 
     public void fillGroupForm(Group group) {
@@ -39,36 +33,20 @@ public class GroupHelper {
         click(By.cssSelector("[href='group.php']"));
     }
 
-    public void submitGroupModification()
-
-    {
+    public void submitGroupModification() {
         click(By.name("update"));
     }
 
-    public void initGroupModification()
-
-    {
+    public void initGroupModification() {
         click(By.cssSelector("[name=edit]:last-child"));
     }
 
-    public void selectGroup()
-
-    {
+    public void selectGroup() {
         click(By.name("selected[]"));
     }
 
-    public void deleteGroup()
-    {
+    public void deleteGroup() {
         click(By.name("delete"));
-    }
-
-    public boolean isElementPresent(By locator) {
-        try {
-            wd.findElement(locator);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
     }
 
     public boolean isGroupPresent()
