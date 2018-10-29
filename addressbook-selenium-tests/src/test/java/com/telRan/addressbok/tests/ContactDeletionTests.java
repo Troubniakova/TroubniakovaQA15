@@ -6,17 +6,17 @@ import org.testng.annotations.Test;
 public class ContactDeletionTests extends TestBase {
     @BeforeMethod
     public void preconditions(){
-        if(!app.isContactPresent()){
-            app.createContact();
+        if(!app.getContactHelper().isContactPresent()){
+            app.getContactHelper().createContact();
         }
     }
 
 
     @Test
     public void testContactDeletion(){
-        app.selectContact();
-        app.deleteContact();
-        app.returnToHomeGage();
+        app.getContactHelper().selectContact();
+        app.getContactHelper().deleteContact();
+
 
     }
 

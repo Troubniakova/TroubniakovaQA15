@@ -54,7 +54,7 @@ public class GroupHelper extends HelperBase {
         return isElementPresent(By.name("selected[]"));
     }
 
-    protected void createGroup() {
+    public void createGroup() {
         initGroupCreation();
         fillGroupForm(new Group().setGroupName("QA 15")
                 .setGroupHeader("jhggh")

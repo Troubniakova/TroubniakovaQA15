@@ -1,12 +1,14 @@
 package com.telRan.addressbok.tests;
 
 import com.telRan.addressbok.manager.ApplicationManager;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase {
 
-    protected ApplicationManager app = new ApplicationManager();
+    WebDriver wd;
+    public ApplicationManager app = new ApplicationManager(wd);
 
     @BeforeClass
     public void setUp(){
