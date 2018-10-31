@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/first-selenium-project.iml" filepath="$PROJECT_DIR$/.idea/modules/first-selenium-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/first-selenium-project_main.iml" filepath="$PROJECT_DIR$/.idea/modules/first-selenium-project_main.iml" group="first-selenium-project" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/first-selenium-project_test.iml" filepath="$PROJECT_DIR$/.idea/modules/first-selenium-project_test.iml" group="first-selenium-project" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trello-selenium-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/trello-selenium-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trello-selenium-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/trello-selenium-tests_main.iml" group="trello-selenium-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trello-selenium-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/trello-selenium-tests_test.iml" group="trello-selenium-tests" />
     </modules>
   </component>
 </project>
