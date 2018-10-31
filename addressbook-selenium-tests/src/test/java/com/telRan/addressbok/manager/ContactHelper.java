@@ -1,6 +1,7 @@
 package com.telRan.addressbok.manager;
 
 import com.telRan.addressbok.model.Contact;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -45,8 +46,8 @@ public class ContactHelper extends HelperBase{
     public void deleteContact() {
         click(By.cssSelector("[onclick=\"DeleteSel()\"]"));
 
-
     }
+
 
     public boolean isContactPresent(){
         return isElementPresent(By.name("selected[]"));

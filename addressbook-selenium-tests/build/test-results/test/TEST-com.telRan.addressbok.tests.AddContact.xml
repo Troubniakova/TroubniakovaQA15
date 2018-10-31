@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telRan.addressbok.tests.AddContact" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-31T12:51:23" hostname="vova" time="4.34">
+  <properties/>
+  <testcase name="testAddContact" classname="com.telRan.addressbok.tests.AddContact" time="4.34"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telRan.addressbok.tests.GroupCretionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-31T12:51:14" hostname="vova" time="3.64">
+  <properties/>
+  <testcase name="testGroupCretion" classname="com.telRan.addressbok.tests.GroupCretionTests" time="3.64"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
