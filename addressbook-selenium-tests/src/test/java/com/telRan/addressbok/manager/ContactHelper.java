@@ -45,6 +45,7 @@ public class ContactHelper extends HelperBase{
 
     public void deleteContact() {
         click(By.cssSelector("[onclick=\"DeleteSel()\"]"));
+        wd.switchTo().alert().accept();
 
     }
 
