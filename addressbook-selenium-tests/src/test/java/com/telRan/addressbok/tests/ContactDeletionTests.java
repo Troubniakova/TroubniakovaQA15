@@ -12,7 +12,7 @@ public class ContactDeletionTests extends TestBase {
     }
 
 
-    @Test
+    @Test (enabled = false)
     public void testContactDeletion(){
         app.getContactHelper().selectContact();
         app.getContactHelper().deleteContact();

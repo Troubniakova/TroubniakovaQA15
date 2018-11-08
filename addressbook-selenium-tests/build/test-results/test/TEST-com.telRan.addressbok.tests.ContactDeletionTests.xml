@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.telRan.addressbok.tests.ContactDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-31T12:51:38" hostname="vova" time="0.444">
-  <properties/>
-  <testcase name="testContactDeletion" classname="com.telRan.addressbok.tests.ContactDeletionTests" time="0.444"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
