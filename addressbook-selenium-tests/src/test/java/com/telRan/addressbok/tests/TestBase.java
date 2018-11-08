@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeSuite;
 public class TestBase {
 
     WebDriver wd;
-    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.FIREFOX));
 
     @BeforeSuite
     public void setUp(){
@@ -20,5 +20,6 @@ public class TestBase {
     public void tearDown(){
         app.stop();
     }
+
 
 }
