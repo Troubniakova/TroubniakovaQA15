@@ -1,0 +1,4 @@
+73927 [main] INFO  c.t.a.tests.GroupCretionTests - Start testGroupCreation
+98236 [main] INFO  c.t.a.tests.GroupCretionTests - Stop testGroupCreation
+98236 [main] INFO  c.t.a.tests.GroupCretionTests - Start testGroupCreation
+101651 [main] INFO  c.t.a.tests.GroupCretionTests - Stop testGroupCreation
