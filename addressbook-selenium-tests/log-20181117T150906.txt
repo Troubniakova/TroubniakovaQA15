@@ -1,0 +1,12 @@
+21704 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestAddContact
+31014 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestAddContact
+31017 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestContactModification
+43069 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestContactModification
+43133 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestGroupCretion
+48591 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestGroupCretion
+48596 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestGroupCretion
+54572 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestGroupCretion
+54576 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestGroupDeletion
+57965 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestGroupDeletion
+57965 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestGroupModification
+62431 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestGroupModification
