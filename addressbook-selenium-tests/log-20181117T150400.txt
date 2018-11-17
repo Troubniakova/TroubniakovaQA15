@@ -1,0 +1,2 @@
+21165 [main] INFO  c.telRan.addressbok.tests.TestBase - Start testtestGroupDeletion
+24793 [main] INFO  c.telRan.addressbok.tests.TestBase - Stop testtestGroupDeletion
